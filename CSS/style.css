@@ -1,0 +1,141 @@
+@import url("CSS/style.css");
+body {
+	margin: 0;
+	font-family: "Poppins", sans-serif;
+	background: #f4f4f4;
+	color: #333;
+}
+
+header {
+	background: white;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+	position: sticky;
+	top: 0;
+	z-index: 100;
+}
+
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px;
+	max-width: 1200px;
+	margin: auto;
+}
+
+.logo {
+	font-size: 28px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+.nav-links {
+	display: flex;
+	gap: 25px;
+}
+
+.nav-links a {
+	text-decoration: none;
+	color: #333;
+	font-weight: 600;
+	transition: 0.3s;
+}
+
+.nav-links a:hover {
+	color: #e63946;
+}
+
+.burger {
+	display: none;
+	flex-direction: column;
+	gap: 5px;
+	cursor: pointer;
+}
+
+.burger div {
+	width: 28px;
+	height: 3px;
+	background: #333;
+	border-radius: 5px;
+}
+
+.hero {
+	text-align: center;
+	padding: 100px 20px;
+	background: linear-gradient(130deg, #ffffff, #eaeaea, #dcdcdc);
+}
+
+.hero h2 {
+	font-size: 40px;
+	margin-bottom: 20px;
+}
+
+.hero p {
+	max-width: 600px;
+	margin: auto;
+	font-size: 18px;
+	line-height: 1.6;
+}
+
+.cta-button {
+	display: inline-block;
+	margin-top: 25px;
+	background: #333;
+	color: white;
+	padding: 14px 25px;
+	border-radius: 50px;
+	text-decoration: none;
+	transition: 0.3s;
+}
+
+.cta-button:hover {
+	background: #e63946;
+}
+
+.featured {
+	max-width: 1100px;
+	margin: 70px auto;
+	text-align: center;
+}
+
+.featured h3 {
+	font-size: 32px;
+	margin-bottom: 30px;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 20px;
+	padding: 0 20px;
+}
+
+.grid img {
+	width: 100%;
+	border-radius: 15px;
+	box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+	transition: 0.3s;
+}
+
+.grid img:hover {
+	transform: scale(1.03);
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+	.nav-links {
+		position: absolute;
+		top: 80px;
+		right: 0;
+		background: white;
+		width: 200px;
+		display: none;
+		flex-direction: column;
+		padding: 20px;
+		box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+	}
+
+	.burger {
+		display: flex;
+	}
+}
